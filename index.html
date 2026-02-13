@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raul Ospina | Hoja de Vida</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0d1117;
+    color:#e6edf3;
+    scroll-behavior:smooth;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    padding-top:120px;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#161b22;
+    display:flex;
+    justify-content:center;
+    padding:15px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    z-index:1000;
+}
+
+.navbar a{
+    color:#c9d1d9;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#58a6ff;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.photo{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid #1f6feb;
+    box-shadow:0 0 20px rgba(31,111,235,0.3);
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:10px;
+    color:#58a6ff;
+}
+
+.subtitle{
+    color:#8b949e;
+    margin-bottom:15px;
+}
+
+.contact{
+    font-size:14px;
+    color:#8b949e;
+}
+
+.section{
+    margin-bottom:80px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.section h2{
+    font-size:26px;
+    margin-bottom:25px;
+    border-left:4px solid #58a6ff;
+    padding-left:10px;
+}
+
+.card{
+    background:#161b22;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+    transition:0.4s;
+    border:1px solid #21262d;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+.skill{
+    margin-bottom:18px;
+}
+
+.bar{
+    height:8px;
+    background:#30363d;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    height:8px;
+    width:0;
+    background:#1f6feb;
+    border-radius:20px;
+    transition:width 2s ease;
+}
+
+button{
+    background:#21262d;
+    border:1px solid #30363d;
+    padding:8px 15px;
+    border-radius:8px;
+    color:#e6edf3;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#30363d;
+}
+
+.hidden{
+    display:none;
+    margin-top:15px;
+    color:#c9d1d9;
+    line-height:1.6;
+}
+
+.footer{
+    text-align:center;
+    color:#8b949e;
+    margin:60px 0;
+    font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="#perfil">Perfil</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#idiomas">Idiomas</a>
+</div>
+
+<div class="container">
+
+<div class="hero">
+    <div class="photo">
+        <img src="foto.jpeg" alt="Foto Raul">
+    </div>
+
+    <h1 id="typing"></h1>
+    <div class="subtitle">Estudiante de Ingeniería de Sistemas | 8° semestre</div>
+    <div class="contact">
+        Universidad Santiago de Cali - Cali, Colombia <br>
+        📧 raulospp27@gmail.com | 📱 3244936395 | GitHub: raulospp
+    </div>
+</div>
+
+<div id="perfil" class="section">
+<h2>Perfil Profesional</h2>
+<div class="card">
+Estudiante de Ingeniería de Sistemas con enfoque en desarrollo de software y análisis de datos.
+Experiencia sólida en Python (nivel avanzado) y conocimientos intermedios en JavaScript, SQL y tecnologías web.
+Capacidad para diseñar soluciones eficientes utilizando programación orientada a objetos,
+procesamiento y limpieza de datos, y desarrollo de aplicaciones interactivas.
+</div>
+</div>
+
+<div id="habilidades" class="section">
+<h2>Habilidades Técnicas</h2>
+<div class="card">
+
+<div class="skill">Python (Avanzado)
+<div class="bar"><div class="progress" data-width="90%"></div></div>
+</div>
+
+<div class="skill">JavaScript (Intermedio)
+<div class="bar"><div class="progress" data-width="75%"></div></div>
+</div>
+
+<div class="skill">HTML (Intermedio)
+<div class="bar"><div class="progress" data-width="75%"></div></div>
+</div>
+
+<div class="skill">CSS (Intermedio)
+<div class="bar"><div class="progress" data-width="70%"></div></div>
+</div>
+
+<div class="skill">SQL (Intermedio)
+<div class="bar"><div class="progress" data-width="75%"></div></div>
+</div>
+
+</div>
+</div>
+
+<div id="proyectos" class="section">
+<h2>Proyectos Destacados</h2>
+
+<div class="card">
+<h3>Gestión y Limpieza de Base de Datos de Nutrición</h3>
+
+<p>
+Proyecto enfocado en la recolección, depuración y análisis de datos relacionados con alimentación,
+hábitos nutricionales y niveles de sobrepeso en diferentes poblaciones.
+</p>
+
+<button onclick="toggleInfo(this)">Ver más</button>
+
+<div class="hidden">
+Se utilizó <strong>Python</strong> y la librería <strong>Pandas</strong> para:
+
+<ul>
+<li>Identificar y tratar datos faltantes.</li>
+<li>Normalizar formatos inconsistentes.</li>
+<li>Filtrar información irrelevante.</li>
+<li>Eliminar registros duplicados.</li>
+<li>Detectar y tratar valores atípicos (outliers).</li>
+<li>Preparar datasets estructurados para análisis estadístico.</li>
+</ul>
+
+El proyecto permitió garantizar resultados confiables y estructurar bases de datos listas para visualización
+y modelado predictivo.
+
+<br><br>
+<strong>Tecnologías:</strong> Python, Pandas.
+</div>
+</div>
+
+
+<div class="card">
+<h3>Juego de Nave Espacial</h3>
+
+<p>
+Videojuego desarrollado en Python donde el jugador controla un cohete que debe defender la Tierra
+disparando a oleadas de aliens invasores.
+</p>
+
+<button onclick="toggleInfo(this)">Ver más</button>
+
+<div class="hidden">
+
+El proyecto incluye:
+
+<ul>
+<li>Lógica de movimiento del jugador y enemigos.</li>
+<li>Sistema de disparos y detección de colisiones.</li>
+<li>Contador de puntuación.</li>
+<li>Niveles de dificultad progresiva.</li>
+<li>Manejo de eventos del teclado.</li>
+<li>Aplicación de Programación Orientada a Objetos.</li>
+</ul>
+
+Se desarrolló utilizando la biblioteca <strong>Pygame</strong>,
+trabajando renderizado gráfico, animaciones y control de eventos en tiempo real.
+
+<br><br>
+<strong>Tecnologías:</strong> Python, Pygame.
+</div>
+</div>
+
+
+<div class="card">
+<h3>goTogether - App de Viajes Universitarios</h3>
+
+<p>
+Aplicación diseñada para conectar estudiantes universitarios que comparten horarios y rutas,
+permitiéndoles coordinar viajes en vehículo y reducir costos de transporte.
+</p>
+
+<button onclick="toggleInfo(this)">Ver más</button>
+
+<div class="hidden">
+
+La aplicación permite:
+
+<ul>
+<li>Registro y autenticación de usuarios.</li>
+<li>Publicar horarios y rutas frecuentes.</li>
+<li>Encontrar coincidencias entre estudiantes con trayectos similares.</li>
+<li>Coordinar viajes compartidos.</li>
+<li>Reducir gastos individuales.</li>
+<li>Fomentar comunidad universitaria.</li>
+</ul>
+
+El proyecto integra lógica de emparejamiento (matching),
+estructura de base de datos y diseño orientado a experiencia de usuario.
+
+<br><br>
+<strong>Tecnologías:</strong> Python, Flask, HTML, CSS.
+</div>
+</div>
+
+</div>
+
+
+<div id="idiomas" class="section">
+<h2>Idiomas</h2>
+<div class="card">
+Inglés - Nivel Intermedio
+<div class="bar"><div class="progress" data-width="70%"></div></div>
+</div>
+</div>
+
+<div class="footer">
+© 2026 Raul Ospina - Portafolio Profesional
+</div>
+
+</div>
+
+<script>
+
+const text = "Raul Ospina - Hoja de Vida";
+let i = 0;
+function typing(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 60);
+    }
+}
+typing();
+
+function toggleInfo(btn){
+    const info = btn.nextElementSibling;
+    info.classList.toggle("hidden");
+}
+
+window.addEventListener("scroll", function(){
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(sec=>{
+        const position = sec.getBoundingClientRect().top;
+        const screen = window.innerHeight;
+        if(position < screen - 100){
+            sec.classList.add("show");
+        }
+    });
+});
+
+window.onload = function(){
+    const bars = document.querySelectorAll(".progress");
+    bars.forEach(bar=>{
+        bar.style.width = bar.getAttribute("data-width");
+    });
+}
+
+</script>
+
+</body>
+</html>
