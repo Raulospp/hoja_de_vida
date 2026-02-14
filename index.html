@@ -6,7 +6,6 @@
 <title>Raul Ospina | Hoja de Vida</title>
 
 <style>
-
 body{
     margin:0;
     font-family: 'Segoe UI', sans-serif;
@@ -135,6 +134,15 @@ h1{
     transition:width 2s ease;
 }
 
+input, textarea{
+    background:#0d1117;
+    border:1px solid #30363d;
+    color:white;
+    padding:8px;
+    border-radius:6px;
+    margin-right:10px;
+}
+
 button{
     background:#21262d;
     border:1px solid #30363d;
@@ -153,8 +161,6 @@ button:hover{
 .hidden{
     display:none;
     margin-top:15px;
-    color:#c9d1d9;
-    line-height:1.6;
 }
 
 .footer{
@@ -163,7 +169,6 @@ button:hover{
     margin:60px 0;
     font-size:13px;
 }
-
 </style>
 </head>
 
@@ -171,6 +176,7 @@ button:hover{
 
 <div class="navbar">
     <a href="#perfil">Perfil</a>
+    <a href="#experiencia">Experiencia</a>
     <a href="#habilidades">Habilidades</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#idiomas">Idiomas</a>
@@ -201,9 +207,27 @@ procesamiento y limpieza de datos, y desarrollo de aplicaciones interactivas.
 </div>
 </div>
 
+<div id="experiencia" class="section">
+<h2>Experiencia Laboral</h2>
+
+<div class="card" id="experience-container">
+<p>Aún sin experiencia formal, participación en proyectos académicos y desarrollo de aplicaciones propias.</p>
+</div>
+
+<h3>Agregar Experiencia</h3>
+<form id="form-experience">
+<input type="text" id="exp-title" placeholder="Cargo" required>
+<input type="text" id="exp-date" placeholder="Fecha (Ej: 2024-2025)" required>
+<br><br>
+<textarea id="exp-desc" placeholder="Descripción de funciones" required></textarea>
+<br>
+<button>Agregar Experiencia</button>
+</form>
+</div>
+
 <div id="habilidades" class="section">
 <h2>Habilidades Técnicas</h2>
-<div class="card">
+<div class="card" id="skills-container">
 
 <div class="skill">Python (Avanzado)
 <div class="bar"><div class="progress" data-width="90%"></div></div>
@@ -213,127 +237,14 @@ procesamiento y limpieza de datos, y desarrollo de aplicaciones interactivas.
 <div class="bar"><div class="progress" data-width="75%"></div></div>
 </div>
 
-<div class="skill">HTML (Intermedio)
-<div class="bar"><div class="progress" data-width="75%"></div></div>
 </div>
 
-<div class="skill">CSS (Intermedio)
-<div class="bar"><div class="progress" data-width="70%"></div></div>
-</div>
-
-<div class="skill">SQL (Intermedio)
-<div class="bar"><div class="progress" data-width="75%"></div></div>
-</div>
-
-</div>
-</div>
-
-<div id="proyectos" class="section">
-<h2>Proyectos Destacados</h2>
-
-<div class="card">
-<h3>Gestión y Limpieza de Base de Datos de Nutrición</h3>
-
-<p>
-Proyecto enfocado en la recolección, depuración y análisis de datos relacionados con alimentación,
-hábitos nutricionales y niveles de sobrepeso en diferentes poblaciones.
-</p>
-
-<button onclick="toggleInfo(this)">Ver más</button>
-
-<div class="hidden">
-Se utilizó <strong>Python</strong> y la librería <strong>Pandas</strong> para:
-
-<ul>
-<li>Identificar y tratar datos faltantes.</li>
-<li>Normalizar formatos inconsistentes.</li>
-<li>Filtrar información irrelevante.</li>
-<li>Eliminar registros duplicados.</li>
-<li>Detectar y tratar valores atípicos (outliers).</li>
-<li>Preparar datasets estructurados para análisis estadístico.</li>
-</ul>
-
-El proyecto permitió garantizar resultados confiables y estructurar bases de datos listas para visualización
-y modelado predictivo.
-
-<br><br>
-<strong>Tecnologías:</strong> Python, Pandas.
-</div>
-</div>
-
-
-<div class="card">
-<h3>Juego de Nave Espacial</h3>
-
-<p>
-Videojuego desarrollado en Python donde el jugador controla un cohete que debe defender la Tierra
-disparando a oleadas de aliens invasores.
-</p>
-
-<button onclick="toggleInfo(this)">Ver más</button>
-
-<div class="hidden">
-
-El proyecto incluye:
-
-<ul>
-<li>Lógica de movimiento del jugador y enemigos.</li>
-<li>Sistema de disparos y detección de colisiones.</li>
-<li>Contador de puntuación.</li>
-<li>Niveles de dificultad progresiva.</li>
-<li>Manejo de eventos del teclado.</li>
-<li>Aplicación de Programación Orientada a Objetos.</li>
-</ul>
-
-Se desarrolló utilizando la biblioteca <strong>Pygame</strong>,
-trabajando renderizado gráfico, animaciones y control de eventos en tiempo real.
-
-<br><br>
-<strong>Tecnologías:</strong> Python, Pygame.
-</div>
-</div>
-
-
-<div class="card">
-<h3>goTogether - App de Viajes Universitarios</h3>
-
-<p>
-Aplicación diseñada para conectar estudiantes universitarios que comparten horarios y rutas,
-permitiéndoles coordinar viajes en vehículo y reducir costos de transporte.
-</p>
-
-<button onclick="toggleInfo(this)">Ver más</button>
-
-<div class="hidden">
-
-La aplicación permite:
-
-<ul>
-<li>Registro y autenticación de usuarios.</li>
-<li>Publicar horarios y rutas frecuentes.</li>
-<li>Encontrar coincidencias entre estudiantes con trayectos similares.</li>
-<li>Coordinar viajes compartidos.</li>
-<li>Reducir gastos individuales.</li>
-<li>Fomentar comunidad universitaria.</li>
-</ul>
-
-El proyecto integra lógica de emparejamiento (matching),
-estructura de base de datos y diseño orientado a experiencia de usuario.
-
-<br><br>
-<strong>Tecnologías:</strong> Python, Flask, HTML, CSS.
-</div>
-</div>
-
-</div>
-
-
-<div id="idiomas" class="section">
-<h2>Idiomas</h2>
-<div class="card">
-Inglés - Nivel Intermedio
-<div class="bar"><div class="progress" data-width="70%"></div></div>
-</div>
+<h3>Agregar Nueva Habilidad</h3>
+<form id="form-skill">
+<input type="text" id="skill-name" placeholder="Nombre habilidad" required>
+<input type="number" id="skill-level" placeholder="%" min="1" max="100" required>
+<button>Agregar</button>
+</form>
 </div>
 
 <div class="footer">
@@ -355,28 +266,71 @@ function typing(){
 }
 typing();
 
-function toggleInfo(btn){
-    const info = btn.nextElementSibling;
-    info.classList.toggle("hidden");
-}
 
 window.addEventListener("scroll", function(){
     const sections = document.querySelectorAll(".section");
     sections.forEach(sec=>{
         const position = sec.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-        if(position < screen - 100){
+        if(position < window.innerHeight - 100){
             sec.classList.add("show");
         }
     });
 });
 
 window.onload = function(){
-    const bars = document.querySelectorAll(".progress");
+    const bars = document.querySelectorAll(".progress[data-width]");
     bars.forEach(bar=>{
         bar.style.width = bar.getAttribute("data-width");
     });
-}
+};
+
+// AGREGAR HABILIDAD
+document.getElementById("form-skill").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("skill-name").value;
+    const level = document.getElementById("skill-level").value;
+
+    const skill = document.createElement("div");
+    skill.classList.add("skill");
+
+    skill.innerHTML = `
+        ${name} (${level}%)
+        <div class="bar">
+            <div class="progress" style="width:0"></div>
+        </div>
+    `;
+
+    document.getElementById("skills-container").appendChild(skill);
+
+    setTimeout(()=>{
+        skill.querySelector(".progress").style.width = level + "%";
+    },100);
+
+    this.reset();
+});
+
+// AGREGAR EXPERIENCIA
+document.getElementById("form-experience").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const title = document.getElementById("exp-title").value;
+    const date = document.getElementById("exp-date").value;
+    const desc = document.getElementById("exp-desc").value;
+
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+        <h3>${title}</h3>
+        <p><strong>${date}</strong></p>
+        <p>${desc}</p>
+    `;
+
+    document.getElementById("experience-container").appendChild(card);
+
+    this.reset();
+});
 
 </script>
 
